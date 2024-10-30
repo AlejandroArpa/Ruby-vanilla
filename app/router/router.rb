@@ -1,6 +1,4 @@
 
-require_relative './swagger'
-
 class Router
   @routes = []
 
@@ -36,10 +34,4 @@ class Router
   def self.find_route(path, verb)
     @routes.find { |route| route[:path] == path && route[:verb] == verb }
   end
-end
-
-Router.draw do
-  get "/reports", to: "reports#getAll"
-  post "/reports", to: "reports#create"
-  get "/swagger", to: "swagger#doc"
 end

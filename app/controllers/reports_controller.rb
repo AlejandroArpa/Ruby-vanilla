@@ -1,17 +1,18 @@
+require_relative '../models/report'
+
 class ReportsController 
-  
+
   def getAll(req)
     reports = Report.all
-    [200, "application/json", [reports.to_json]]
+    [200, "application/json", [reports]]
   end
+
 
   def create(req)
     report_params = parse_body(req)
 
     begin
-      # Validar que los parámetros requeridos estén presentes
-      raise ArgumentError, "Faltan parámetros obligatorios" if report_params["date"].nil? || report_params["tipo_de_reporte"].nil? || report_params["estado"].nil?
-      # Intentar crear un nuevo reporte
+      raise ArgumentError, "Faltan parámetros obligatorios" if report_params["tipo_de_reporte"].nil? || report_params["estado"].nil?
       report = Report.new(report_params)
       report.save
     rescue ArgumentError => e
@@ -19,12 +20,17 @@ class ReportsController
     rescue ActiveModel::UnknownAttributeError => e
       res = [400, "application/json",  error: e.message]
     else
-      res = [201, "application/json", report.to_json]
+      res = [201, "application/json", report]
     ensure
       
     end
     return res
   end
+
+  def edit(req)
+    
+  end
+
 
   private
 
