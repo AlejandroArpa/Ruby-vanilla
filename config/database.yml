@@ -1,0 +1,7 @@
+development:
+  adapter: mysql2
+  database: complains
+  username: root
+  password: password123
+  host: localhost
+  port: 3306 

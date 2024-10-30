@@ -1,0 +1,39 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/home/alejo/Documentos/Ruby/complainApp/config/routes.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1730208119
+  }
+}
