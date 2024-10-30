@@ -11,3 +11,5 @@ group :development do
   gem 'guard'
   gem 'guard-puma'
 end
+gem 'ostruct'
+gem 'swagger-blocks'

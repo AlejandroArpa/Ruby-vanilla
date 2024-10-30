@@ -1,4 +1,6 @@
-# config/routes.rb
+
+require_relative './swagger'
+
 class Router
   @routes = []
 
@@ -39,4 +41,5 @@ end
 Router.draw do
   get "/reports", to: "reports#getAll"
   post "/reports", to: "reports#create"
+  get "/swagger", to: "swagger#doc"
 end
