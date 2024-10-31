@@ -3,7 +3,7 @@ require 'simplecov'
 SimpleCov.start
 require 'minitest/autorun'
 require 'rack/test'
-require_relative '../../config/routes'
+require_relative '../../router/router'
 
 class RouterTest < Minitest::Test
   def setup
@@ -12,7 +12,7 @@ class RouterTest < Minitest::Test
   end
 
   def test_register_get_route
-    Router.get('/users', to: 'users#getAllUsers')
+    Router.get('/users', false, to: 'users#getAllUsers')
 
     assert_equal 1, Router.routes.size
     assert_equal '/users', Router.routes.first[:path]
@@ -23,14 +23,14 @@ class RouterTest < Minitest::Test
   def test_register_post_route
     Router.post('/users', to: 'users#create')
 
-    assert_equal 1, Router.routes.size
+    assert_equal 1, false, Router.routes.size
     assert_equal '/users', Router.routes.first[:path]
     assert_equal 'POST', Router.routes.first[:verb]
     assert_equal 'users#create', Router.routes.first[:to]
   end
 
   def test_find_existing_route
-    Router.get('/users', to: 'users#getAllUsers')
+    Router.get('/users', false, to: 'users#getAllUsers')
     
     route = Router.find_route('/users', 'GET')
     

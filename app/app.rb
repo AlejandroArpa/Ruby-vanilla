@@ -14,19 +14,8 @@ class MyAPI
 
   def call(env)
 
-    req = Rack::Request.new(env)
-    res = Rack::Response.new
     controller_class = Object.const_get("#{env['controller_name'].capitalize}Controller")
       controller = controller_class.new
-      status, content_type, data, error = controller.send(env['action_name'], req)
-      res = Rack::Response.new
-      res.status = status
-      res["Content-Type"] = content_type
-      if data
-        res.write({ data: data }.to_json)
-      elsif error
-        res.write({ error: error }.to_json)
-      end
-      res.finish
+      controller.send(env['action_name'], env)
   end
 end
