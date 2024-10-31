@@ -1,7 +1,7 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/home/alejo/Documentos/Ruby/complainApp/config/routes.rb": {
+      "/home/alejo/Documentos/Ruby/complainApp/app/router/router.rb": {
         "lines": [
           null,
           1,
@@ -11,29 +11,50 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           1,
-          4,
+          2,
+          0,
           null,
+          2,
           null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          4,
-          null,
+          2,
           null,
           null,
           1,
           1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1730208119
+    "timestamp": 1730383827
   }
 }
