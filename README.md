@@ -5,11 +5,11 @@
 
   The goal is have an intermediate solution between JSON server and a fully-featured backend, and get a fast tool, special for front developers.👾
 
-### Requeriments 📝
+## Requeriments 📝
   * Ruby installed (prefered 3.3.5 LTS at 1/11/24) 
   * All necessary gems installed.
 
-### Running the project 🚀
+## Running the project 🚀
   1. Install project's gems
   ```bash
     bundle install
@@ -29,8 +29,11 @@
     puma
   ```
 
-### Run test: (under constrution) 🚧🔜
+## Run test: (under constrution) 🚧🔜
   To run tests (when available):
 ```bash
   bundle exec ruby test_my_app.rb
 ```
+
+## Feedback and Contributions 🌟
+  If you enjoy reviewing my code, please consider leaving a star! I'm always open to improving the code and accepting recommendations, so feel free to fork this repository and make contributions. Together, we’re building a thriving Ruby and Rails community, sharing knowledge and skills to make a big impact!
